@@ -21,8 +21,8 @@ const onSubmitForm = event => {
   const email = document.querySelector('[name="email"]');
   const message = document.querySelector('[name="message"]');
   if (data) {
-    email.value = data.email;
-    message.value = data.message;
+    data.email ? (email.value = data.email) : {};
+    data.message ? (message.value = data.message) : {};
   }
 })();
 
