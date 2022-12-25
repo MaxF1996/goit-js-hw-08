@@ -25,9 +25,6 @@ const onSubmitForm = event => {
     data.email ? (email.value = data.email) : {};
     data.message ? (message.value = data.message) : {};
   }
-  if (!data.email && !data.message) {
-    localStorage.removeItem('feedback-form-state');
-  }
 })();
 
 form.addEventListener('input', throttle(onFormData, 500));
